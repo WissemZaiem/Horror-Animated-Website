@@ -1,5 +1,4 @@
 body{
-   
     padding: 0;
     margin: 0;
     position: relative;
@@ -10,10 +9,11 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     width: 100vw;
-    height: 50.8vw;
+    height: 102.3vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -60px;
 }
 .dark{
     width:7%;
@@ -29,7 +29,6 @@ body{
     height: 60%;
 }
 .container1{
-    
     width: 40vw;
     height: 92vh;
     position: absolute;
@@ -41,10 +40,10 @@ body{
     color: white;
    }
 .director{
-grid-area: director;
-height: fit-content;
-width: fit-content;
-margin-top: 80px;
+    grid-area: director;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 80px;
 }
 .bio{
     grid-area: bio;
@@ -52,7 +51,6 @@ margin-top: 80px;
     height: 100%;
     display: flex;
     justify-content: flex-start;
-    
 }
 .director-pic{
     width: 30vw;
@@ -65,24 +63,21 @@ margin-top: 80px;
     transform: scale(1.2);
 }
 .intro{
-font-family: 'Montserrat', sans-serif;
-font-weight: 200;
-font-size: 16px;
-margin-top: 30px;
-text-align: justify;
-margin-right: 100px;
-
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    margin-top: 30px;
+    text-align: justify;
+    margin-right: 100px;
 }
 .director-name{   
     height: fit-content; 
-   width:  70px;
+    width:  70px;
     margin-right: 5px;
     margin-left: 50px;
     position: relative;
     animation-name: james;
     animation-duration: 4s;
-   
-    
 }
 @keyframes pic{
     0%   {top:  -80px;}
@@ -95,7 +90,7 @@ margin-right: 100px;
 @keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
-  }
+}
 .name{
     font-family: 'Montserrat', sans-serif; 
     color: white;
@@ -106,12 +101,11 @@ margin-right: 100px;
     font-size: 60px;
 }
 .container2{
-  
     height: fit-content;
     width: fit-content;
     position:absolute;
     left: 75%;
-    top: 70px;
+    top: 55px;
     display: grid;
     grid-template-areas:
     'movie'
@@ -122,7 +116,6 @@ margin-right: 100px;
     height: 400px;
     transition: transform 1s;
     animation: fadeIn ease 6s;
-    
 }
 .movie-pic:hover{
     transform:scale(1.1)
@@ -130,18 +123,14 @@ margin-right: 100px;
 .movie{
     height: 30%;
     width: 100%;
-    
-    
 }
-.stats{
-    
+.stats{  
     display: flex;
     justify-content: center;
     color: white;
-    margin-top: 20px;
+    margin-top: 18px;
     width: fit-content;
     gap: 35px;
-    
 }
 .button{
     border: 2px solid white;
@@ -151,7 +140,6 @@ margin-right: 100px;
     font-weight: 300;
     animation: fadeIn ease 6s;
 }
-
 .movie-info{
     color: white;
     width: 75%;
@@ -163,5 +151,87 @@ margin-right: 100px;
 .button:hover{
     background-color: white;
     color: black;
+}
+.navbar{
+    margin-top:10px ;
+    margin-left: 60%;
+    width: 40%;
+    display: grid;
+    grid-template-areas:
+    'movies categories actors directors sign-in';
+    position:relative;
+    animation-name: nav;
+    animation-duration: 4s;
+}
+@keyframes nav{
+    0%   {left:  -150px;}
+    100%   {left: 0px;}
+}
+
+.movies{
+grid-area: movies;
+}
+.categories{
+grid-area: categories;
+}
+.actors{
+grid-area:actors;
+}
+.directors{
+grid-area: directors;
+}
+.sign-in{
+grid-area: sign-in;
+}
+.navbutt{
+    color: white;
+   font-family: 'Montserrat', sans-serif; 
+   font-size: 18px;
+   padding: 5px;
+   width: fit-content;
+   cursor: pointer;
+   position: relative;
+   
+}
+
+
+
+.navbutt:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .navbutt:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .sign-in:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(233, 31, 31);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    
+}
+.sign-in:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    
+}
+.sign-in:hover{
+    color: rgb(233, 31, 31);
 }
 
